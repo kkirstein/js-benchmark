@@ -15,11 +15,18 @@
   },
   "devDependencies": {
     "webpack": "^3.0.0",
+    "eslint": "^4.1.1",
     "expect.js": "^0.3.1",
     "mocha": "^2.4.5"
   },
-  "jshintConfig": {
-    "esversion": 6,
-    "node": true
+  "eslintConfig": {
+    "parserOptions": {
+      "ecmaVersion": 7,
+      "sourceType": "module"
+    },
+    "env": {
+      "browser": true,
+      "node": true
+    }
   }
 }
