@@ -10,18 +10,34 @@ function main() {
     // collect output
     let output = [];
 
+    // add output to DOM
+    let element = document.createElement('div');
+
     // start message
     output.push("JavaScript benchmarks");
     output.push("=====================");
 
     // run Fibonacci benchmarks
-    output.push("Fibonacci numbers:");
-    output.push("------------------");
+    let fib_header = document.createElement("h2");
+    fib_header.innerHTML = "Fibonacci numbers:";
+    element.appendChild(fib_header);
     const tic = new Date();
     const fib_1 = fib_naive(35);
     fib_1.then(res => {
         const toc = new Date();
-        output.push(_.join(["fib_naive(35) = ", res, "\tElapsed: ", toc.getTime()-tic.getTime(), "ms."], ""));
+        element.appendChild(document.createTextNode(_.join(["fib_naive(35) = ", res, "\tElapsed: ", toc.getTime()-tic.getTime(), "ms."], "")));
+
+        // run perfect numbers benchmarks
+        let pn_header = document.createElement("h2");
+        pn_header.innerHTML = "Perfect numbers:";
+        element.appendChild(pn_header);
+
+
+        // run Mandelbrot benchmark
+        let mandel_header = document.createElement("h2");
+        mandel_header.innerHTML = "Mandelbrot set:";
+        element.appendChild(mandel_header);
+
     });
 
     /*
@@ -30,20 +46,9 @@ function main() {
     */
 
 
-    // run perfect numbers benchmarks
-    output.push("Perfect numbers:");
-    output.push("----------------");
-
-
-    // run Mandelbrot benchmark
-    output.push("Mandelbrot set:");
-    output.push("---------------");
-
-
     // add output to DOM
-    let element = document.createElement('div');
     Promise.all([fib_1]).then(values => {
-        element.innerHTML = _.join(output, '<br>');
+        //element.innerHTML = _.join(output, '<br>');
         document.body.appendChild(element);
     });
 
