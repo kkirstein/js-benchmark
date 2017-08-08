@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "description": "A collection of (micro-) benchmarks for Javascript",
   "author": "Kay-Uwe Kirstein",
+  "license": "MIT",
   "dependencies": {
     "lodash": "^4.17.4",
     "BigInt": "^5.5.3",
