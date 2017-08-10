@@ -6,7 +6,7 @@
 
 'use strict';
 
-var m = require('../mandelbrot.js');
+var m = require('../src/mandelbrot.js');
 var expect = require('expect.js');
 
 describe('Mandelbrot module', function () {

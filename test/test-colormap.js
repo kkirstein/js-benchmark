@@ -6,7 +6,7 @@
 
 'use strict';
 
-var cm = require('../colormap.js');
+var cm = require('../src/colormap.js');
 var expect = require('expect.js');
 
 describe('Colormap module', function () {

@@ -6,7 +6,7 @@
 
 'use strict';
 
-var pn = require('../perfect_numbers.js');
+var pn = require('../src/perfect_numbers.js');
 var expect = require('expect.js');
 
 describe('PerfectNumbers module', function () {

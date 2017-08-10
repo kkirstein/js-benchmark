@@ -7,7 +7,8 @@
 
 'use strict';
 
-import t from 'timeit';
+import * as t from 'timeit';
+//import 'timeit';
 
 // time_it helper
 // async function time_it(fun, ...args) {

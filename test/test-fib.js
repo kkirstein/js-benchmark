@@ -6,7 +6,8 @@
 
 'use strict';
 
-var fib = require('../fib.js');
+import fib from "../src/fib.js";
+//var fib = require('../src/fib.js');
 var BigInt = require('BigInt');
 var expect = require('expect.js');
 
