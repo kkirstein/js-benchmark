@@ -12,13 +12,15 @@
   "scripts": {
     "webpack": "webpack",
     "run": "node .\\src\\benchmark_cli.js",
-    "test": ".\\node_modules\\.bin\\mocha test"
+    "test": "mocha-webpack --webpack-config webpack.config-test.js \"test/test-*.js\""
   },
   "devDependencies": {
-    "webpack": "^3.0.0",
     "eslint": "^4.1.1",
     "expect.js": "^0.3.1",
-    "mocha": "^3.5.0"
+    "mocha": "^3.5.0",
+    "mocha-webpack": "^0.7.0",
+    "webpack": "^3.0.0",
+    "webpack-node-externals": "^1.6.0"
   },
   "eslintConfig": {
     "parserOptions": {
